@@ -15,4 +15,7 @@
   <p>説明：<%= post_image.caption %></p>
   <p>ユーザーネーム：<%= post_image.user.name %></p>
 </div>
+<%if @user == current_user %>
+<%=link_to "編集",edit_user_path(@user) %>
+<%end%>
 <% end %>
